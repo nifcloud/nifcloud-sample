@@ -7,7 +7,7 @@ This is the repository for various sample scripts for using the SDK and tools pr
 Inside each sub directory, we include a README file that explains how to build and run the examples in the directory.
 
 ## Proposing new code examples
-To propose a new code example, create a Issus.
+To propose a new code example, create a Issues.
 
 
 ## Copyright and License
