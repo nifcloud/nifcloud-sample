@@ -15,7 +15,7 @@ def parse_ipPermissions(ippermissions):
         print("\tDescription :", permission["Description"])
         print("\tIN/OUT      :", permission["InOut"])
         print("\tProtocol    :", permission["IpProtocol"])
-        if permission["IpProtocol"] != "ANY":
+        if permission["IpProtocol"] in ["TCP","UDP"]:
             print("\tPort        : %i - %i" %
                   (permission["FromPort"], permission["ToPort"]))
         if "IpRanges" in permission:
@@ -27,7 +27,7 @@ def parse_ipPermissions(ippermissions):
 def parse_routerSet(routerset):
     print("RouterSet :")
     for router in routerset:
-        router["routerName"]
+        router["RouterName"]
 
 
 def parse_vpnGatewaySet(vpnGatewayset):
