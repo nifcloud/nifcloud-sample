@@ -1,6 +1,6 @@
 # Terraform Demo
 
-This is a simple terraform demo for [NIFCLOUD](https://www.nifcloud.com/)  
+This is a simple terraform demo for [NIFCLOUD](https://pfs.nifcloud.com/)  
 This repository uses [Terraform Provider for NIFCLOUD](https://github.com/nifcloud/terraform-provider-nifcloud)
 
 ## Usage
