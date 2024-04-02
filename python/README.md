@@ -15,4 +15,4 @@ Code examples that show how to use Boto3 to access nifcloud.
 - [nifcloud SDK for Python Documentation](https://nifcloud-sdk-python.readthedocs.io/en/latest/)
 
 
-Copyright nifcloud, Inc. All Rights Reserved.
+Copyright Fujitsu. All Rights Reserved.

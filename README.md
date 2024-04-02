@@ -12,6 +12,6 @@ To propose a new code example, create a Issues.
 
 ## Copyright and License
 
-All content in this repository, unless otherwise stated, is Copyright © FUJITSU CLOUD TECHNOLOGIES LIMITED, Inc. or its affiliates. All rights reserved.
+All content in this repository, unless otherwise stated, is Copyright © Fujitsu. or its affiliates. All rights reserved.
 
 Except where otherwise noted, all examples in this collection are licensed under the Apache license, version 2.0 (the "License"). The full license text is provided in the LICENSE file accompanying this repository.
