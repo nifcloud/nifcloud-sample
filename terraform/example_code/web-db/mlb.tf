@@ -1,6 +1,6 @@
 # Multi Loadbarancer sample
 resource "nifcloud_elb" "web001" {
-  # see https://pfs.nifcloud.com/api/rest/NiftyCreateElasticLoadBalancer.htm
+  # see https://docs.nifcloud.com/cp/api/NiftyCreateElasticLoadBalancer.htm
   # Multi Loadbarancer name
   elb_name          = "web001"
   # memo

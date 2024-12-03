@@ -60,7 +60,7 @@ def create_l4lb_sorrypage(client):
                         },
                     ],
                     NetworkVolume=10,# Max Network Traffic.
-                                     # See also https://pfs.nifcloud.com/api/rest/CreateLoadBalancer.htm
+                                     # See also https://docs.nifcloud.com/cp/api/CreateLoadBalancer.htm
                     PolicyType='standard' # Encrypt type
                                           # standard: Not ATS Support(Default)
                                           # ats: ATS Support

@@ -39,7 +39,7 @@ def add_interface(client):
             # memo
             Description='string',
             # Set Ipaddress
-            # See https://pfs.nifcloud.com/api/rest/CreateNetworkInterface.htm
+            # See https://docs.nifcloud.com/cp/api/CreateNetworkInterface.htm
             IpAddress='string',
             # Connect Network
             # net-COMMON_GLOBAL :Common Global

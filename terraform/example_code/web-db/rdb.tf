@@ -1,6 +1,6 @@
 # RDB sample config
 resource "nifcloud_db_instance" "db001" {
-  # Base Document https://pfs.nifcloud.com/api/rdb/CreateDBInstance.htm
+  # Base Document https://docs.nifcloud.com/rdb/api/CreateDBInstance.htm
   # -- Basic config --
   #1:Monthly
   #2:Payper
@@ -88,7 +88,7 @@ resource "nifcloud_db_instance" "db001" {
   # apply immediate for change parameter at apply.
   # if this parameter false. config apply in maitenance period.
   # See also "ApplyImmediately" in 
-  # https://pfs.nifcloud.com/api/rdb/ModifyDBInstance.htm
+  # https://docs.nifcloud.com/rdb/api/ModifyDBInstance.htm
   apply_immediately              = true
   # --- Terrfrom Parameter ---
   # bakcup in destory
@@ -100,7 +100,7 @@ resource "nifcloud_db_instance" "db001" {
 }
 
 resource "nifcloud_db_parameter_group" "db001param" {
-  # Base Document https://pfs.nifcloud.com/api/rdb/CreateDBParameterGroup.htm
+  # Base Document https://docs.nifcloud.com/rdb/api/CreateDBParameterGroup.htm
   # Config Name
   name        = "db001param"
   # Database Parameter Family name

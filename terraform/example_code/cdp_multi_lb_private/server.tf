@@ -16,7 +16,7 @@ resource "nifcloud_instance" "srv1" {
  # security_group = nifcloud_security_group.lan01fw.group_name
 
   # Server size.
-  # https://pfs.nifcloud.com/api/rest/RunInstances.htm
+  # https://docs.nifcloud.com/cp/api/RunInstances.htm
   instance_type = "c-medium"
 
   # Accounting
@@ -59,7 +59,7 @@ resource "nifcloud_instance" "srv2" {
   security_group = nifcloud_security_group.lan02srvfw.group_name
 
   # Server size.
-  # https://pfs.nifcloud.com/api/rest/RunInstances.htm
+  # https://docs.nifcloud.com/cp/api/RunInstances.htm
   instance_type = "c-medium"
 
   # Accounting
@@ -102,7 +102,7 @@ resource "nifcloud_instance" "srv3" {
   security_group = nifcloud_security_group.lan02srvfw.group_name
 
   # Server size.
-  # https://pfs.nifcloud.com/api/rest/RunInstances.htm
+  # https://docs.nifcloud.com/cp/api/RunInstances.htm
   instance_type = "c-medium"
 
   # Accounting

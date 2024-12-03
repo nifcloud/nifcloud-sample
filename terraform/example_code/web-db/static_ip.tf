@@ -1,5 +1,5 @@
 # Static IP sample
-# see https://pfs.nifcloud.com/api/rest/AllocateAddress.htm
+# see https://docs.nifcloud.com/cp/api/AllocateAddress.htm
 resource "nifcloud_elastic_ip" "web001" {
   # true :Private IP
   # false:Global IP

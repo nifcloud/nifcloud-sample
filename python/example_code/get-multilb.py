@@ -149,7 +149,7 @@ def get_multi_lb(client):
                 ]
             },
             # Search Filter
-            # https://pfs.nifcloud.com/api/rest/NiftyDescribeElasticLoadBalancers.htm
+            # https://docs.nifcloud.com/cp/api/NiftyDescribeElasticLoadBalancers.htm
             Filter=[
                 {
                     'ListOfRequestValue': [

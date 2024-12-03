@@ -68,7 +68,7 @@ def update_private_network(client, server_name):
                     #Select Setting Network.Exclusive NetwokId
                     'NetworkName'  : 'string',
                     #See also NetworkInterface.n.IpAddress in
-                    #https://pfs.nifcloud.com/api/rest/NiftyUpdateInstanceNetworkInterfaces.htm
+                    #https://docs.nifcloud.com/cp/api/NiftyUpdateInstanceNetworkInterfaces.htm
                     'IpAddress'    : 'string',
                 },
             ],
