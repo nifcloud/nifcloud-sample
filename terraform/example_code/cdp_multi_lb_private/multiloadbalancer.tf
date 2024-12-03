@@ -1,6 +1,6 @@
 # Multi Loadbarancer Config
 resource "nifcloud_elb" "elb" {
-  # see https://pfs.nifcloud.com/api/rest/NiftyCreateElasticLoadBalancer.htm
+  # see https://docs.nifcloud.com/cp/api/NiftyCreateElasticLoadBalancer.htm
   # Multi Loadbarancer name
   elb_name          = "elb"
   # memo

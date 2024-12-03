@@ -175,7 +175,7 @@ def create_rdb(client,pvlanid):
     try:
         """
         client.create_db_instance(
-            # Master Document https://pfs.nifcloud.com/api/rdb/CreateDBInstance.htm
+            # Master Document https://docs.nifcloud.com/rdb/api/CreateDBInstance.htm
             # Accounting
             # '1':Monthly
             # '2':Payper(Default)

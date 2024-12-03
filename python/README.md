@@ -11,7 +11,7 @@ Code examples that show how to use Boto3 to access nifcloud.
 
 ## Documentation
 
-- [nifcloud API Documentation](https://pfs.nifcloud.com/api/)
+- [nifcloud API Documentation](https://docs.nifcloud.com/)
 - [nifcloud SDK for Python Documentation](https://nifcloud-sdk-python.readthedocs.io/en/latest/)
 
 

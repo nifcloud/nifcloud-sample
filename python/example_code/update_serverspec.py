@@ -65,7 +65,7 @@ def update_instance_attr(client, server_name):
             Attribute=string,
             # Update Value
             # See also
-            # https://pfs.nifcloud.com/api/rest/ModifyInstanceAttribute.htm
+            # https://docs.nifcloud.com/cp/api/ModifyInstanceAttribute.htm
             Value='string',
             # Reboot Option
             # force:Force reboot

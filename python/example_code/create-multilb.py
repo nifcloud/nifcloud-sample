@@ -109,7 +109,7 @@ def create_multi_lb(client):
             NetworkInterface=[
                 {
                     'IpAddress': 'string',#See also NetworkInterface.n.IpAddress in
-                                          #https://pfs.nifcloud.com/api/rest/NiftyCreateElasticLoadBalancer.htm
+                                          #https://docs.nifcloud.com/cp/api/NiftyCreateElasticLoadBalancer.htm
                                           #if use the DHCP delete this
                     'NetworkId': 'string',#Connect Network.Exclusive NetworkName.
                                           #net-COMMON_GLOBAL :Common Global
@@ -120,7 +120,7 @@ def create_multi_lb(client):
                 },
             ],
             NetworkVolume=10,# Max Network Traffic.
-                             # See also https://pfs.nifcloud.com/api/rest/NiftyCreateElasticLoadBalancer.htm
+                             # See also https://docs.nifcloud.com/cp/api/NiftyCreateElasticLoadBalancer.htm
         )
         """
         client.nifty_create_elastic_load_balancer(

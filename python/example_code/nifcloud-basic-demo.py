@@ -243,7 +243,7 @@ def create_instance(client):
             ImageId='string',   #OS Image Name
             InstanceId='string',#Server Name
             InstanceType="",#Server Type
-                            #see also https://pfs.nifcloud.com/api/rest/RunInstances.htm
+                            #see also https://docs.nifcloud.com/cp/api/RunInstances.htm
             KeyName='string',#SSH Key Name
             License=[#License Infomation.see also https://pfs.nifcloud.com/service/licence_ms.htm
                 {#No.1 License Info
@@ -263,7 +263,7 @@ def create_instance(client):
             NetworkInterface=[#Network Config.
                 {#Full argument
                     'IpAddress': 'string',#See also NetworkInterface.n.IpAddress in
-                                          #https://pfs.nifcloud.com/api/rest/RunInstances.htm
+                                          #https://docs.nifcloud.com/cp/api/RunInstances.htm
                                           #if use the DHCP delete this
                     'NetworkId': 'string',#Connect Network
                                           #net-COMMON_GLOBAL :Common Global

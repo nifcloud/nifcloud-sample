@@ -1,6 +1,6 @@
 resource "nifcloud_vpn_gateway" "e13vpngw" {
   provider = nifcloud.east1
-  # Base Document https://pfs.nifcloud.com/api/rest/CreateVpnGateway.htm
+  # Base Document https://docs.nifcloud.com/cp/api/CreateVpnGateway.htm
   # Accounting
   #1:Monthly
   #2:Payper

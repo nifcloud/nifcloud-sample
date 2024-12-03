@@ -56,7 +56,7 @@ def update_multi_lb(client):
                                    #2:Payper(Default)
             ElasticLoadBalancerNameUpdate='string' # Name After change
             NetworkVolumeUpdate=10,# Max Network Traffic.
-             # See also https://pfs.nifcloud.com/api/rest/NiftyCreateElasticLoadBalancer.htm
+             # See also https://docs.nifcloud.com/cp/api/NiftyCreateElasticLoadBalancer.htm
         )
         """
         client.nifty_update_elastic_load_balancer(

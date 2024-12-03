@@ -1,7 +1,7 @@
 # ------- VPN Connection Config ------------------------
 resource "nifcloud_customer_gateway" "e13tow12custgw" {
   provider = nifcloud.east1
-  # Base Document https://pfs.nifcloud.com/api/rest/CreateCustomerGateway.htm
+  # Base Document https://docs.nifcloud.com/cp/api/CreateCustomerGateway.htm
   # Cosuter Gateway Name
   name                = "e13tow12custgw"
   # Target Global IP for establishing a VPN Connection 
@@ -16,7 +16,7 @@ resource "nifcloud_customer_gateway" "e13tow12custgw" {
 
 resource "nifcloud_vpn_connection" "e13tow12connection" {
   provider = nifcloud.east1
-  # Base Document https://pfs.nifcloud.com/api/rest/CreateVpnConnection.htm
+  # Base Document https://docs.nifcloud.com/cp/api/CreateVpnConnection.htm
   # memo
   description                                          = "e13tow12connection"
   # VPN Connection Type.
@@ -74,7 +74,7 @@ resource "nifcloud_vpn_connection" "e13tow12connection" {
 
 resource "nifcloud_customer_gateway" "e13tow21custgw" {
   provider = nifcloud.east1
-  # Base Document https://pfs.nifcloud.com/api/rest/CreateCustomerGateway.htm
+  # Base Document https://docs.nifcloud.com/cp/api/CreateCustomerGateway.htm
   # Cosuter Gateway Name
   name                = "e13tow21custgw"
   # Target Global IP for establishing a VPN Connection 
@@ -89,7 +89,7 @@ resource "nifcloud_customer_gateway" "e13tow21custgw" {
 
 resource "nifcloud_vpn_connection" "e13tow21connection" {
   provider = nifcloud.east1
-  # Base Document https://pfs.nifcloud.com/api/rest/CreateVpnConnection.htm
+  # Base Document https://docs.nifcloud.com/cp/api/CreateVpnConnection.htm
   # memo
   description                                          = "tow21connection"
   # VPN Connection Type.

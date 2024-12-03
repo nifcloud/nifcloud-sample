@@ -32,7 +32,7 @@ def create_autoscaling(client):
             # Range 1800-36000(1800step).Default 1800
             InstanceLifecycleLimit=1800,
             #Server Type.Default 'mini'
-            #see also https://pfs.nifcloud.com/api/rest/RunInstances.htm
+            #see also https://docs.nifcloud.com/cp/api/RunInstances.htm
             InstanceType="mini",
             # Min Instance count.
             # Range 1-(MaxSize-1)

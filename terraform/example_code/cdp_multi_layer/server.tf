@@ -16,7 +16,7 @@ resource "nifcloud_instance" "websrv" {
   security_group = nifcloud_security_group.websrvfw.group_name
 
   # Server size.
-  # https://pfs.nifcloud.com/api/rest/RunInstances.htm
+  # https://docs.nifcloud.com/cp/api/RunInstances.htm
   instance_type = "c-medium"
 
   # Accounting
@@ -73,7 +73,7 @@ resource "nifcloud_instance" "dbsrv" {
   # show file firewall.tf
   security_group = nifcloud_security_group.dbsrvfw.group_name
   # Server size.
-  # https://pfs.nifcloud.com/api/rest/RunInstances.htm
+  # https://docs.nifcloud.com/cp/api/RunInstances.htm
   instance_type = "c-medium"
   # Accounting
   #1:Monthly

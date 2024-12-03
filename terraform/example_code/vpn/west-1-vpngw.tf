@@ -1,7 +1,7 @@
 # --------------- VPN Connection Config ------------------
 resource "nifcloud_customer_gateway" "toe13custgw" {
   provider = nifcloud.west1
-  # Base Document https://pfs.nifcloud.com/api/rest/CreateCustomerGateway.htm
+  # Base Document https://docs.nifcloud.com/cp/api/CreateCustomerGateway.htm
   # Cosuter Gateway Name
   name                = "toe13custgw"
   # Target Global IP for establishing a VPN Connection 
@@ -16,7 +16,7 @@ resource "nifcloud_customer_gateway" "toe13custgw" {
 
 resource "nifcloud_vpn_connection" "toe13connection" {
   provider = nifcloud.west1
-  # Base Document https://pfs.nifcloud.com/api/rest/CreateVpnConnection.htm
+  # Base Document https://docs.nifcloud.com/cp/api/CreateVpnConnection.htm
   # memo
   description                                          = "toe13connection"
   # VPN Connection Type.

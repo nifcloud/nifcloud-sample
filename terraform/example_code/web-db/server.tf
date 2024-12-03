@@ -12,7 +12,7 @@ resource "nifcloud_instance" "web001" {
   # show file firewall.tf
   security_group = nifcloud_security_group.webfw.group_name
   # Server size.
-  # https://pfs.nifcloud.com/api/rest/RunInstances.htm
+  # https://docs.nifcloud.com/cp/api/RunInstances.htm
   instance_type = "small"
   # Accounting
   #1:Monthly
@@ -92,7 +92,7 @@ resource "nifcloud_volume" "commonserver" {
   # Disk Nmae
   volume_id       = "comdisk01"
   # Disk Type
-  # See also diskType at https://pfs.nifcloud.com/api/rest/DescribeVolumes.htm
+  # See also diskType at https://docs.nifcloud.com/cp/api/DescribeVolumes.htm
   disk_type       = "High-Speed Storage B"
   # Connect Server ID
   instance_id     = nifcloud_instance.commonserver.instance_id
