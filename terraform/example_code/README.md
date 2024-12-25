@@ -40,3 +40,7 @@ https://pfs.nifcloud.com/cdp/basic/router_proxy.htm
 ## cdp_sorrypage
 CDP : Use of "Sorry Page" function
 https://pfs.nifcloud.com/cdp/app/sorry_page.htm
+
+## cdp_router_nat
+CDP : NAT by router
+https://pfs.nifcloud.com/cdp/basic/router_nat.htm
