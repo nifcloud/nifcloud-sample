@@ -54,7 +54,8 @@ def create_vpngw(client):
             NiftyVpnGatewayDescription='string', # memo
             # VPN Gateway spec.'small','medium' or 'large'
             NiftyVpnGatewayType='small',
-            # Private Side Network
+            # for Connecting a global network to a private LAN
+            # Set exclusively with NetworkInterface
             NiftyNetwork={
                 # Connect Network ID
                 # Set exclusively with NetworkName
@@ -66,6 +67,36 @@ def create_vpngw(client):
                 #if use the DHCP delete this
                 'IpAddress': 'string',
             },
+            # for Connecting a private LAN to a private LAN
+            # Set exclusively with NiftyNetwork
+            NetworkInterface=[
+                # opposing device side network
+                {
+                    # Connect Network ID
+                    # Set exclusively with NetworkName
+                    'NetworkId': 'string',
+                    # Connect Network Name
+                    # Set exclusively with NetworkID
+                    'NetworkName': 'string',
+                    # Set IPaddress in Private Network
+                    'IpAddress': 'string',
+                    # opposing device side network is to set "IsOutsideNetwork" True
+                    'IsOutsideNetwork': True
+                },
+                # Private side network
+                {
+                    # Connect Network ID
+                    # Set exclusively with NetworkName
+                    'NetworkId': 'string',
+                    # Connect Network Name
+                    # Set exclusively with NetworkID
+                    'NetworkName': 'string',
+                    # Set IPaddress in Private Network
+                    'IpAddress': 'string',
+                    # Private side network is to set "IsOutsideNetwork" False
+                    'IsOutsideNetwork': False,
+                },
+            ],
             #Zone Name.
             Placement={
                 'AvailabilityZone': 'string'
@@ -83,7 +114,7 @@ def create_vpngw(client):
             NiftyVpnGatewayType='small',
             NiftyNetwork={
                 'NetworkName': PRIVATE_NW_NAME,
-                'IpAddress': PRIVATE_NW_CIDR,
+                'IpAddress': PRIVATE_NW_IP,
             },
             Placement={
                 'AvailabilityZone': 'east-21'
