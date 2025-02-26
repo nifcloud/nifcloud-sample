@@ -67,8 +67,9 @@ def create_rdb_fw(client):
             # memo
             DBSecurityGroupDescription='string',
             #Zone Name.
-            #For jp-east-1, east-11,east-12,east-13,east-14 can be selected.
-            #For jp-west-1, west-11,west-12,west-13 can be selected.
+            #For jp-east-1, you can select east-11,east-12,east-13,east-14.
+            #For jp-east-2, you can select east-21.
+            #For jp-west-1, you can select west-11,west-12,west-13.
             NiftyAvailabilityZone='string'
         )
         """
@@ -78,8 +79,9 @@ def create_rdb_fw(client):
             # memo
             DBSecurityGroupDescription='sample fw',
             # Zone Name.
-            # For jp-east-1, east-11,east-12,east-13,east-14 can be selected.
-            # For jp-west-1, west-11,west-12,west-13 can be selected.
+            # For jp-east-1, you can select east-11,east-12,east-13,east-14.
+            # For jp-east-2, you can select east-21.
+            # For jp-west-1, you can select west-11,west-12,west-13.
             NiftyAvailabilityZone=AZ
         )
 
@@ -107,7 +109,7 @@ def create_rdb_fw(client):
     except Exception as e:
         print("exception :", e, "\nin :", sys._getframe().f_code.co_name)
         client.delete_db_security_group(
-            DBSecurityGroupName=WEB_SECURITY_GP_NAME,
+            DBSecurityGroupName=RDB_SECURITY_GP_NAME,
         )
         sys.exit(1)
 
@@ -226,19 +228,9 @@ def create_rdb(client,pvlanid):
             # -- Redundant Config --
             # Enable Redundant.True / False
             MultiAZ=True,
-            # Redundant Type
-            # 0:Prioritize Data protection(default)
-            # 1:Prioritize Performance(MySQL Only)
-            NiftyMultiAZType=0,
-            # name of read replica instance name
-            # Only Use NiftyMultiAZType is 1
-            # See "NiftyReadReplicaDBInstanceIdentifie" specifiction
-            NiftyReadReplicaDBInstanceIdentifier='string',
             # Secondry DB IP
-            # if NiftyMultiAZType is 0
+            # if MultiAZ is True
             NiftySlavePrivateAddress='string',
-            # if NiftyMultiAZType is 1
-            NiftyReadReplicaPrivateAddress='string',
             # Backup time range.Set by UTC Time
             # See "PreferredBackupWindow" specifiction
             PreferredBackupWindow='18:00-18:30',
@@ -246,10 +238,6 @@ def create_rdb(client,pvlanid):
             # Maitenance Time Range.Set by UTC Time
             # See "PreferredMaintenanceWindow" specifiction
             PreferredMaintenanceWindow='sun:19:00-sun:19:30',
-            # Read Replica Accounting
-            # '1':Monthly
-            # '2':Payper(Default)
-            ReadReplicaAccountingType='2',
         )
         """
         rdb = client.create_db_instance(
@@ -280,14 +268,10 @@ def create_rdb(client,pvlanid):
             BackupRetentionPeriod=2,
             # -- Redundant Config --
             MultiAZ=True,
-            NiftyMultiAZType=1,
-            NiftyReadReplicaDBInstanceIdentifier=f"{RDB_NAME}-read",
-            NiftyReadReplicaPrivateAddress=RDB_SLAVLE_IP,
+            NiftySlavePrivateAddress=RDB_SLAVLE_IP,
             PreferredBackupWindow='18:00-18:30',
             # -- Maitenace Config --
             PreferredMaintenanceWindow='sun:19:00-sun:19:30',
-            # Read Replica Accounting
-            ReadReplicaAccountingType='2',
         )
         print("create : ", rdb)
         wait_for_rdb_create(client, RDB_NAME)
@@ -385,10 +369,9 @@ rdbclient = session.get_session().create_client(
     "rdb",
     region_name="jp-east-1",
 )
-#pvlanid = create_private_lan(client)
-#create_rdb_fw(rdbclient)
-#create_rdb_parameter(rdbclient)
-pvlanid = "net-0ou5fx21"
+pvlanid = create_private_lan(client)
+create_rdb_fw(rdbclient)
+create_rdb_parameter(rdbclient)
 create_rdb(rdbclient,pvlanid)
 
 # flake8: noqa: E501

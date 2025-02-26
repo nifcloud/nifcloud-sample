@@ -76,10 +76,13 @@ def create_multi_lb(client):
                         'Interval': 5,# Healtcheck interval.5(default)-300s.
                         'UnhealthyThreshold': 1,# Healthcheck Limit Threshold.1(default)-10
                         'ListOfRequestExpectation': [
-                            # if Target is only set at HTTP or HTTPS,can specify it. 
+                            # if 'Target' is only set at HTTP or HTTPS,can specify it. 
                             # HTTP code that is considered normal
+                            # Can be set '1xx','2xx','3xx','4xx' and'5xx'.
+                            # For example If '2xx' is set, between 200 and 299 the status is considered normal.
+                            # Other parameters are interpreted in the same way.
                             {
-                                'HttpCode': 123 
+                                'HttpCode': '2xx'
                             },
                         ],
                     },
@@ -111,6 +114,11 @@ def create_multi_lb(client):
                     'IpAddress': 'string',#See also NetworkInterface.n.IpAddress in
                                           #https://docs.nifcloud.com/cp/api/NiftyCreateElasticLoadBalancer.htm
                                           #if use the DHCP delete this
+                    'ListOfRequestSystemIpAddresses': [{'SystemIpAddress':'string'},{'SystemIpAddress':'string'},],
+                                # See aloso NetworkInterface.n.SystemIpAddresses.m.SystemIpAddress in
+                                # https://docs.nifcloud.com/cp/api/NiftyCreateElasticLoadBalancer.htm .
+                                # can be set if connect network is PrivateLAN.
+                                # Request 2 IP addresses.
                     'NetworkId': 'string',#Connect Network.Exclusive NetworkName.
                                           #net-COMMON_GLOBAL :Common Global
                                           #net-COMMON_PRIVATE:Common Private
@@ -146,18 +154,15 @@ def create_multi_lb(client):
                         'Interval': 5,# Healtcheck interval.5(default)-300s.
                         'UnhealthyThreshold': 1,# Healthcheck Limit Threshold.1(default)-10
                         'ListOfRequestExpectation': [
-                            # if Target is only set at HTTP or HTTPS,can specify it. 
+                            # if 'Target' is only set at HTTP or HTTPS,can specify it. 
                             # HTTP code that is considered normal
-                            { 'HttpCode': 200 },
-                            { 'HttpCode': 201 },
-                            { 'HttpCode': 202 },
-                            { 'HttpCode': 203 },
-                            { 'HttpCode': 204 },
-                            { 'HttpCode': 205 },
-                            { 'HttpCode': 206 },
-                            { 'HttpCode': 207 },
-                            { 'HttpCode': 208 },
-                            { 'HttpCode': 226 },
+                            # Can be set '2xx','3xx','4xx' and'5xx'.
+                            # For example If '2xx' is set, between 200 and 299 the status is considered normal.
+                            { 'HttpCode': '1xx' },# 100 to 199 are considered normal.
+                            { 'HttpCode': '2xx' },# 200 to 299 are considered normal.
+                            { 'HttpCode': '3xx' },# 300 to 399 are considered normal.
+                            { 'HttpCode': '4xx' },# 400 to 499 are considered normal.
+                            { 'HttpCode': '5xx' },# 500 to 599 are considered normal.
                         ],
                     },
                     # Session Sticky Policy
@@ -184,11 +189,13 @@ def create_multi_lb(client):
                 {
                     'NetworkId': 'net-COMMON_GLOBAL',#Connect Network.Exclusive NetworkName.
                                           #net-COMMON_GLOBAL :Common Global
+                    'NetworkName': 'Private01',#Private LAN name.Exclusive NetworkId.
                     'IsVipNetwork': True,# Is Load Balancer reception interface:True / False
                 },
                 {
                     'IpAddress': '192.168.10.235',
-                    'NetworkName': 'Private01',#Private LAN name.Exclusive NetworkId.
+                    'ListOfRequestSystemIpAddresses': [{'SystemIpAddress':'192.168.10.234'},{'SystemIpAddress':'192.168.10.233'},],
+                    'NetworkName': 'Private02',#Private LAN name.Exclusive NetworkId.
                     'IsVipNetwork': False,# Is Load Balancer reception interface:True / False
                 },
             ],

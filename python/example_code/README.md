@@ -57,7 +57,7 @@ Change Multi Load Balancer route table
 ## get-usage.py
 Display resource and charge Usage
 
-## get-activities.py.py
+## get-activities.py
 Display user activities
 
 ## add-network_interface.py
@@ -81,8 +81,8 @@ Update the network to connect the private NIC
 ## update_serverspec.py
 Update server attribute
 
-## create-rdp.py
-Create rdp instance
+## create-rdb.py
+Create rdb instance
 
 ## create-vpngw.py
 Create VPN Gateway
