@@ -7,7 +7,7 @@ resource "nifcloud_private_lan" "W21VPNPri01" {
   description = "vpn network"
   # Accounting
   #1:Monthly
-  #2:Payper
+  #2:Pay-per
   accounting_type = "2"
   # Create zone
   availability_zone = "jp-west-21"

@@ -3,7 +3,7 @@ resource "nifcloud_instance" "websrv" {
   instance_id       = "websrv"
   availability_zone = "east-14"
 
-  # Pri-installed OS
+  # Pre-installed OS
   # Show file os_image.tf
   image_id = data.nifcloud_image.rockylinux.id
 
@@ -21,7 +21,7 @@ resource "nifcloud_instance" "websrv" {
 
   # Accounting
   #1:Monthly
-  #2:Payper
+  #2:Pay-per
   accounting_type = "2"
 
   # memo
@@ -52,7 +52,7 @@ data "template_file" "websrv_private_ip" {
 resource "nifcloud_instance" "appsrv" {
   instance_id       = "appsrv"
   availability_zone = "east-14"
-  # Pri-installed OS
+  # Pre-installed OS
   # Show file os_image.tf
   image_id = data.nifcloud_image.rockylinux.id
   # SSH Key File
@@ -66,7 +66,7 @@ resource "nifcloud_instance" "appsrv" {
   instance_type = "c-medium"
   # Accounting
   #1:Monthly
-  #2:Payper
+  #2:Pay-per
   accounting_type = "2"
 
   # memo
@@ -92,7 +92,7 @@ data "template_file" "appsrv_private_ip" {
 resource "nifcloud_instance" "dbsrv" {
   instance_id       = "dbsrv"
   availability_zone = "east-14"
-  # Pri-installed OS
+  # Pre-installed OS
   # Show file os_image.tf
   image_id = data.nifcloud_image.rockylinux.id
   # SSH Key File
@@ -106,7 +106,7 @@ resource "nifcloud_instance" "dbsrv" {
   instance_type = "c-medium"
   # Accounting
   #1:Monthly
-  #2:Payper
+  #2:Pay-per
   accounting_type = "2"
 
   # memo

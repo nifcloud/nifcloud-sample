@@ -2,7 +2,7 @@
 resource "nifcloud_instance" "web001" {
   instance_id       = "web001"
   availability_zone = "jp-east-41"
-  # Pri-installed OS
+  # Pre-installed OS
   # Show file os_image.tf
   image_id = data.nifcloud_image.CentOS_8_1.id
   # SSH Key File
@@ -16,7 +16,7 @@ resource "nifcloud_instance" "web001" {
   instance_type = "small"
   # Accounting
   #1:Monthly
-  #2:Payper
+  #2:Pay-per
   accounting_type = "2"
 
   # Network Interface
@@ -85,11 +85,11 @@ resource "nifcloud_volume" "commonserver" {
   # Comment
   description     = "memo"
   #1:Monthly
-  #2:Payper
+  #2:Pay-per
   accounting_type = "2"
   # Disk Size
   size            = 100
-  # Disk Nmae
+  # Disk Name
   volume_id       = "comdisk01"
   # Disk Type
   # See also diskType at https://docs.nifcloud.com/cp/api/DescribeVolumes.htm

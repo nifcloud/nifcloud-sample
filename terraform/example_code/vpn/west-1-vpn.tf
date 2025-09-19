@@ -3,7 +3,7 @@ resource "nifcloud_vpn_gateway" "w12vpngw" {
   # Base Document https://docs.nifcloud.com/cp/api/CreateVpnGateway.htm
   # Accounting
   #1:Monthly
-  #2:Payper
+  #2:Pay-per
   accounting_type   = "2"
   # VPN GW Name
   name              = "w12vpngw"

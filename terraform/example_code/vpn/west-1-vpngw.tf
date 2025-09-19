@@ -53,7 +53,7 @@ resource "nifcloud_vpn_connection" "toe13connection" {
   # encryption algorithm.See NiftyIpsecConfiguration.EncryptionAlgorithm
   # Default:AES128
   ipsec_config_encryption_algorithm                    = "AES256"
-  # authentation algorithm.See NiftyIpsecConfiguration.HashAlgorithm
+  # authentication algorithm.See NiftyIpsecConfiguration.HashAlgorithm
   # Default:SHA1
   ipsec_config_hash_algorithm                          = "SHA256"
   # pre shared key.See NiftyIpsecConfiguration.PreSharedKey
@@ -65,7 +65,7 @@ resource "nifcloud_vpn_connection" "toe13connection" {
   ipsec_config_internet_key_exchange_lifetime          = 28800
   # expiration time for ESP SA.Range 30～86400(sec).default 3600
   ipsec_config_encapsulating_security_payload_lifetime = 3600
-  # Diffie-Hellman Group Paramater
+  # Diffie-Hellman Group Parameter
   # See NiftyIpsecConfiguration.DiffieHellmanGroup
   # default:2(1024-bit MODP group)
   ipsec_config_diffie_hellman_group                    = 2

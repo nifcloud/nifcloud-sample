@@ -6,7 +6,7 @@ resource "nifcloud_private_lan" "Private01" {
   description       = "ap db network"
   # Accounting
   #1:Monthly
-  #2:Payper
+  #2:Pay-per
   accounting_type   = "2"
   # Create zone
   availability_zone = "jp-east-41"

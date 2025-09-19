@@ -1,7 +1,7 @@
 # nifcloud terraform provider sample
 
 ## How to run
-1. run `terrafrom init` to install NIFCLOUD Provider.
+1. run `terraform init` to install NIFCLOUD Provider.
 2. define environment variables NIFCLOUD_ACCESS_KEY_ID and NIFCLOUD_SECRET_ACCESS_KEY. 
 3. run `terraform plan` to check change plan.
 4. exec `terraform apply`
@@ -44,3 +44,35 @@ https://pfs.nifcloud.com/cdp/app/sorry_page.htm
 ## cdp_router_nat
 CDP : NAT by router
 https://pfs.nifcloud.com/cdp/basic/router_nat.htm
+
+## cdp_cross_region
+CDP : Private bridge / Cross region
+https://pfs.nifcloud.com/cdp/advanced/privatebridge.htm
+
+## cdp_disk
+CDP : Disk operations
+https://pfs.nifcloud.com/cdp/basic/disk.htm
+
+## cdp_multi_zone
+CDP : Multi zone
+https://pfs.nifcloud.com/cdp/advanced/multi_zone.htm
+
+## cdp_rdb_redundancy
+CDP : RDB redundancy
+https://pfs.nifcloud.com/cdp/app/rdb_redundancy.htm
+
+## cdp_remote_access_vpn
+CDP : Remote Access VPN Gateway
+https://pfs.nifcloud.com/cdp/advanced/ra_vpngw.htm
+
+## cdp_ss
+CDP : Server Separate
+https://pfs.nifcloud.com/cdp/advanced/ss.htm
+
+## cdp_vpngw
+CDP : VPN Gateway
+https://pfs.nifcloud.com/cdp/advanced/vpngw.htm
+
+## image
+Create server image (os_image)
+https://pfs.nifcloud.com/cdp/advanced/image.htm

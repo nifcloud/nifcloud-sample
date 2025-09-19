@@ -16,14 +16,14 @@ resource "nifcloud_security_group" "privatefw" {
 
 # Single Host Permit Rule
 resource "nifcloud_security_group_rule" "ssh" {
-  # Target Firewall Group Nmae
+  # Target Firewall Group Name
   security_group_names = [nifcloud_security_group.webfw.group_name]
   # Rule Type
   # can be set IN or OUT
   type                 = "IN"
-  # Range start of Accept Port. paramete range 0 - 65535
+  # Range start of Accept Port. parameter range 0 - 65535
   from_port            = 22
-  # Port. paramete range 0 - 65535
+  # Port. parameter range 0 - 65535
   to_port              = 22
   # Protocol Type.
   # Parameter is "ANY","TCP","UDP","ICMP","GRE","ESP","AH","VRRP","ICMPv6-all"
@@ -41,7 +41,7 @@ resource "nifcloud_security_group_rule" "web-classB" {
   cidr_ip              = "198.51.100.0/24"
 }
 
-# Single Host Permit Rule by using Protocl
+# Single Host Permit Rule by using Protocol
 resource "nifcloud_security_group_rule" "web_access_allow" {
   security_group_names = [nifcloud_security_group.webfw.group_name]
   type                 = "IN"

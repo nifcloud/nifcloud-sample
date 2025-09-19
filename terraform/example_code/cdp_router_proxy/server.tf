@@ -23,7 +23,7 @@ resource "nifcloud_instance" "srv" {
   instance_id       = each.value.instance_id
   availability_zone = "east-14"
 
-  # Pri-installed OS
+  # Pre-installed OS
   # Show file os_image.tf
   image_id = data.nifcloud_image.rockylinux.id
 
@@ -41,7 +41,7 @@ resource "nifcloud_instance" "srv" {
 
   # Accounting
   #1:Monthly
-  #2:Payper
+  #2:Pay-per
   accounting_type = "2"
 
   # memo
