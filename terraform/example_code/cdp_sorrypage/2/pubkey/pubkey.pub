@@ -1,2 +1,2 @@
-# 1. create ssh-key file.recommendation SSH-RSA 2048bit.
-# 2. modify the ssh-key file name to pubkey.pub.
+# 1. create ssh-key file. recommended: SSH-RSA 2048bit.
+# 2. rename the ssh-key file to pubkey.pub.

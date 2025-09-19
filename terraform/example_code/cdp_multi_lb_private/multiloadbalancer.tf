@@ -9,7 +9,7 @@ resource "nifcloud_elb" "elb" {
   availability_zone = "jp-east-14"
   # Accounting
   #1:Monthly
-  #2:Payper
+  #2:Pay-per
   accounting_type   = "2"
   # Traffic limit
   network_volume    = 10

@@ -11,4 +11,4 @@
 - [NIFCLOUD Provider Documentation](https://github.com/nifcloud/terraform-provider-nifcloud/blob/master/docs/index.md)
 - [NIFCLOUD Provider Examples](https://github.com/nifcloud/terraform-provider-nifcloud/blob/master/examples/)
 
-Copyright Fujtisu. All Rights Reserved.
+Copyright Fujitsu. All Rights Reserved.

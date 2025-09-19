@@ -3,8 +3,8 @@
 ## How to run
 
 1. create ssh-key file.recommendation SSH-RSA 2048bit.
-2. modify the ssh-key file name to pubkey.pub.
-3. run `terrafrom init` to install NIFCLOUD Provider.
+2. rename the ssh-key file to pubkey.pub.
+3. run `terraform init` to install NIFCLOUD Provider.
 4. define environment variables NIFCLOUD_ACCESS_KEY_ID And NIFCLOUD_SECRET_ACCESS_KEY. 
    * Command Prompt
      * export NIFCLOUD_ACCESS_KEY_ID="xxxxx"

@@ -9,7 +9,7 @@ resource "nifcloud_security_group" "w21vpnfw" {
 
 resource "nifcloud_security_group_rule" "accept_east_vpn_in_w21" {
   provider = nifcloud.west2
-  # Target Firewall Group Nmae
+  # Target Firewall Group Name
   security_group_names = [nifcloud_security_group.w21vpnfw.group_name]
   # Rule Type
   # can be set IN or OUT

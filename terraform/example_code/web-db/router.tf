@@ -9,7 +9,7 @@ resource "nifcloud_router" "webdbrouter" {
   availability_zone = "jp-east-41"
   # Accounting
   #1:Monthly
-  #2:Payper
+  #2:Pay-per
   accounting_type   = "2"
   # Router Size
   # small :~10 route per route table
@@ -71,7 +71,7 @@ resource "nifcloud_dhcp_config" "webdbnw" {
 resource "nifcloud_dhcp_option" "webdbnw" {
   # domain name
   domain_name         = "example.com"
-  # default gatway
+  # default gateway
   default_router      = "198.51.100.1"
   # DNS server
   domain_name_servers = ["198.51.100.201","198.51.100.202"]

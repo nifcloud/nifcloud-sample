@@ -2,7 +2,7 @@
 resource "nifcloud_instance" "srv" {
   instance_id       = "srv"
   availability_zone = "east-14"
-  # Pri-installed OS
+  # Pre-installed OS
   # Show file os_image.tf
   image_id = data.nifcloud_image.rockylinux.id
   # SSH Key File
@@ -12,11 +12,11 @@ resource "nifcloud_instance" "srv" {
   # show file firewall.tf
   security_group = nifcloud_security_group.srvfw.group_name
   # Server size.
-  # https://pfs.nifcloud.com/api/rest/RunInstances.htm
+  # https://docs.nifcloud.com/cp/api/RunInstances.htm
   instance_type = "c-medium"
   # Accounting
   #1:Monthly
-  #2:Payper
+  #2:Pay-per
   accounting_type = "2"
 
   # memo

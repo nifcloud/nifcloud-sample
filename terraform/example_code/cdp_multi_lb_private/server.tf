@@ -3,7 +3,7 @@ resource "nifcloud_instance" "srv1" {
   instance_id       = "srv1"
   availability_zone = "east-14"
 
-  # Pri-installed OS
+  # Pre-installed OS
   # Show file os_image.tf
   image_id = data.nifcloud_image.rockylinux.id
 
@@ -21,7 +21,7 @@ resource "nifcloud_instance" "srv1" {
 
   # Accounting
   #1:Monthly
-  #2:Payper
+  #2:Pay-per
   accounting_type = "2"
 
   # memo
@@ -46,7 +46,7 @@ resource "nifcloud_instance" "srv2" {
   instance_id       = "srv2"
   availability_zone = "east-14"
 
-  # Pri-installed OS
+  # Pre-installed OS
   # Show file os_image.tf
   image_id = data.nifcloud_image.rockylinux.id
 
@@ -64,7 +64,7 @@ resource "nifcloud_instance" "srv2" {
 
   # Accounting
   #1:Monthly
-  #2:Payper
+  #2:Pay-per
   accounting_type = "2"
 
   # memo
@@ -89,7 +89,7 @@ resource "nifcloud_instance" "srv3" {
   instance_id       = "srv3"
   availability_zone = "east-14"
 
-  # Pri-installed OS
+  # Pre-installed OS
   # Show file os_image.tf
   image_id = data.nifcloud_image.rockylinux.id
 
@@ -107,7 +107,7 @@ resource "nifcloud_instance" "srv3" {
 
   # Accounting
   #1:Monthly
-  #2:Payper
+  #2:Pay-per
   accounting_type = "2"
 
   # memo

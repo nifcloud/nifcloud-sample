@@ -9,7 +9,7 @@ resource "nifcloud_router" "rt" {
   availability_zone = "east-14"
   # Accounting
   #1:Monthly
-  #2:Payper
+  #2:Pay-per
   accounting_type   = "2"
   # Router Size
   # small :~10 route per route table

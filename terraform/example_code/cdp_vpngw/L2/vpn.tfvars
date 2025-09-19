@@ -1,0 +1,8 @@
+tunnel_id_1            = "1"
+tunnel_session_id_1    = "1"
+tunnel_source_port_1   = "7777"
+tunnel_id_2            = "2"
+tunnel_session_id_2    = "2"
+tunnel_source_port_2   = "7777"
+w12_route_ip_vpn_nw    = "198.51.100.125"
+w12_route_ip_srv_nw    = "198.51.100.250"

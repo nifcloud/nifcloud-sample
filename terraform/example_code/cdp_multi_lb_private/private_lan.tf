@@ -5,7 +5,7 @@ resource "nifcloud_private_lan" "PrivateLan01" {
 
   # Accounting
   #1:Monthly
-  #2:Payper
+  #2:Pay-per
   accounting_type   = "2"
 
   # Create zone
@@ -24,7 +24,7 @@ resource "nifcloud_private_lan" "PrivateLan02" {
 
   # Accounting
   #1:Monthly
-  #2:Payper
+  #2:Pay-per
   accounting_type   = "2"
 
   # Create zone
